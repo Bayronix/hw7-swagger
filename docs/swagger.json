@@ -11,7 +11,7 @@
   },
   "servers": [
     {
-      "url": "http://localhost:4000"
+      "url": "http://localhost:3000"
     },
     {
       "url": "https://node-js-hw-2-mongodb.onrender.com"
@@ -30,7 +30,9 @@
   "paths": {
     "/contacts": {
       "get": {
-        "tags": ["Contacts"],
+        "tags": [
+          "Contacts"
+        ],
         "summary": "Get list of contacts",
         "operationId": "getContacts",
         "description": "Get list of users with this endpoint",
@@ -70,7 +72,10 @@
             "name": "sortOrder",
             "schema": {
               "type": "string",
-              "enum": ["asc", "desc"],
+              "enum": [
+                "asc",
+                "desc"
+              ],
               "example": "asc"
             }
           },
@@ -79,8 +84,11 @@
             "name": "contactType",
             "schema": {
               "type": "string",
-              "enum": ["home", "personal"],
-              "example": "personal"
+              "enum": [
+                "home",
+                "personal"
+              ],
+              "example": "work"
             }
           }
         ],
@@ -91,7 +99,11 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "required": ["status", "message", "data"],
+                  "required": [
+                    "status",
+                    "message",
+                    "data"
+                  ],
                   "properties": {
                     "status": {
                       "type": "integer",
@@ -116,7 +128,7 @@
                         "data": {
                           "type": "array",
                           "items": {
-                            "$ref": "#/components/schemas/contacts"
+                            "$ref": "#/components/schemas/contacs"
                           }
                         },
                         "page": {
@@ -156,7 +168,9 @@
         }
       },
       "post": {
-        "tags": ["Contacts"],
+        "tags": [
+          "Contacts"
+        ],
         "summary": "Create contacts",
         "operationId": "createContacts",
         "description": "Create a Contact with payload",
@@ -201,7 +215,10 @@
                   "contactType": {
                     "description": "Contact type",
                     "type": "string",
-                    "enum": ["home", "personal"]
+                    "enum": [
+                      "home",
+                      "personal"
+                    ]
                   }
                 }
               }
@@ -215,7 +232,11 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "required": ["status", "message", "data"],
+                  "required": [
+                    "status",
+                    "message",
+                    "data"
+                  ],
                   "properties": {
                     "status": {
                       "type": "integer",
@@ -227,7 +248,7 @@
                     },
                     "data": {
                       "type": "object",
-                      "$ref": "#/components/schemas/contacts"
+                      "$ref": "#/components/schemas/contacs"
                     }
                   }
                 }
@@ -242,7 +263,9 @@
     },
     "/contacts/{id}": {
       "get": {
-        "tags": ["Contacts"],
+        "tags": [
+          "Contacts"
+        ],
         "summary": "Get Contacts by id",
         "operationId": "getContact",
         "description": "Get Contacts by id",
@@ -269,7 +292,11 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "required": ["status", "message", "data"],
+                  "required": [
+                    "status",
+                    "message",
+                    "data"
+                  ],
                   "properties": {
                     "status": {
                       "type": "integer",
@@ -281,7 +308,7 @@
                     },
                     "data": {
                       "type": "object",
-                      "$ref": "#/components/schemas/contacts"
+                      "$ref": "#/components/schemas/contacs"
                     }
                   }
                 }
@@ -294,7 +321,9 @@
         }
       },
       "patch": {
-        "tags": ["Contacts"],
+        "tags": [
+          "Contacts"
+        ],
         "summary": "Update a contact",
         "operationId": "updateContact",
         "description": "Partially update a contact by ID",
@@ -343,7 +372,11 @@
                   "contactType": {
                     "description": "Type of contact",
                     "type": "string",
-                    "enum": ["home", "personal"]
+                    "enum": [
+                      "work",
+                      "home",
+                      "personal"
+                    ]
                   }
                 }
               }
@@ -357,7 +390,11 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "required": ["status", "message", "data"],
+                  "required": [
+                    "status",
+                    "message",
+                    "data"
+                  ],
                   "properties": {
                     "status": {
                       "type": "integer",
@@ -369,7 +406,7 @@
                     },
                     "data": {
                       "type": "object",
-                      "$ref": "#/components/schemas/contacts"
+                      "$ref": "#/components/schemas/contacs"
                     }
                   }
                 }
@@ -402,7 +439,9 @@
         }
       },
       "delete": {
-        "tags": ["Contacts"],
+        "tags": [
+          "Contacts"
+        ],
         "summary": "Delete a contact",
         "operationId": "deleteContact",
         "description": "Delete a contact by ID",
@@ -430,7 +469,10 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "required": ["status", "message"],
+                  "required": [
+                    "status",
+                    "message"
+                  ],
                   "properties": {
                     "status": {
                       "type": "integer",
@@ -480,7 +522,7 @@
       }
     },
     "schemas": {
-      "contacts": {
+      "contacs": {
         "type": "object",
         "required": [
           "_id",
@@ -518,7 +560,10 @@
           "contactType": {
             "description": "Contact type",
             "type": "string",
-            "enum": ["home", "personal"]
+            "enum": [
+              "home",
+              "personal"
+            ]
           },
           "userId": {
             "description": "Movie's user id",
@@ -540,7 +585,11 @@
           "application/json": {
             "schema": {
               "type": "object",
-              "required": ["status", "message", "data"],
+              "required": [
+                "status",
+                "message",
+                "data"
+              ],
               "properties": {
                 "status": {
                   "type": "integer",
@@ -552,7 +601,9 @@
                 },
                 "data": {
                   "type": "object",
-                  "required": ["message"],
+                  "required": [
+                    "message"
+                  ],
                   "properties": {
                     "message": {
                       "type": "string",

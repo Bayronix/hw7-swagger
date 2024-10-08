@@ -10,6 +10,7 @@ import env from './utils/env.js';
 import notFoundHandler from './middlewares/notFoundHandler.js';
 
 import authRouter from './routers/auth.js';
+import { swaggerDocs } from './middlewares/swaggerDocs.js';
 
 export const startServer = () => {
   const app = express();
@@ -20,7 +21,7 @@ export const startServer = () => {
 
   app.use(authRouter);
   app.use(routerContacts);
-
+  app.use('/api-docs', swaggerDocs());
   app.use(notFoundHandler);
 
   app.use(errorHandler);
