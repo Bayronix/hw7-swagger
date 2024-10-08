@@ -37,7 +37,7 @@ requestBody:
           contactType:
             description: 'Type of contact'
             type: string
-            enum: ['work', 'home', 'personal']
+            enum: [ 'home', 'personal']
 responses:
   '200':
     description: Successfully updated contact
