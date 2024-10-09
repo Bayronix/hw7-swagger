@@ -56,5 +56,5 @@ router.patch(
   ctrlWrapper(patchContactController),
 );
 
-/* Інший код файлу */
+
 export default router;

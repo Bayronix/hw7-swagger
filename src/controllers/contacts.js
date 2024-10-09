@@ -7,6 +7,7 @@ import { sortFields } from '../db/models/Contact.js';
 import { saveFileToUploadDir } from '../utils/saveFileToUploadDir.js';
 import { saveFileToCloudinary } from '../utils/saveFileToCloudinary.js';
 import env from '../utils/env.js';
+import { generateAuthUrl } from '../utils/googleOAuth2.js';
 export const getAllContactsController = async (req, res, next) => {
   try {
     const { perPage, page } = parsePaginationParams(req.query);
@@ -156,4 +157,15 @@ export const getContactsController = async (req, res, next) => {
   } catch (error) {
     next(error);
   }
+};
+
+export const getGoogleOAuthUrlController = async (req, res) => {
+  const url = generateAuthUrl();
+  res.json({
+    status: 200,
+    message: 'Successfully get Google OAuth url!',
+    data: {
+      url,
+    },
+  });
 };
