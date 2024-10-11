@@ -58,7 +58,7 @@ responses:
               example: Successfully updated contact with id 66e156c5bb5b90d367a19c92!
             data:
               type: object
-              $ref: '../../components/schemas/contacs.yaml'
+              $ref: ..\..\components\schemas\contacts.yaml
   '401':
     $ref: ../../components/responses/401.yaml
   '404':
