@@ -1,11 +1,12 @@
 tags:
   - Contacts
-summary: Create contacts
+summary: Create contact
 operationId: createContacts
 description: 'Create a Contact with payload'
 security:
   - bearerAuth: []
 requestBody:
+  required: true
   content:
     multipart/form-data:
       schema:
@@ -19,24 +20,32 @@ requestBody:
           - photo
         properties:
           name:
-            description: 'Contacts name'
+            description: "Contact's name"
             type: string
-            example: 'Vasia Pupkin'
+            example: "John Doe"
           phoneNumber:
-            description: 'Contacts number'
+            description: "Contact's number"
             type: string
-            example: 0992320987
+            example: "099888888"
           email:
-            description: 'Contacts email'
+            description: "Contact's email"
             type: string
+            format: email
+            example: "john.doe@example.com"
           isFavourite:
-            description: 'Is Contact favorite'
+            description: "Is Contact favorite"
             type: boolean
             example: false
           contactType:
-            description: 'Contact type'
+            description: "Contact type"
             type: string
             enum: ['home', 'personal']
+            example: 'personal'
+          photo:
+            description: "Contact's photo"
+            type: string
+            format: binary
+            example: "https://res.cloudinary.com/uqwgdu/image/upload/image.png"
 responses:
   '201':
     description: Creates a contact
@@ -54,9 +63,8 @@ responses:
               example: 201
             message:
               type: string
-              example: Successfully created a student!
+              example: 'Successfully created a contact!'
             data:
-              type: object
-              $ref: '../components/schemas/contacs.yaml'
+              $ref: "../components/schemas/contacts.yaml"
   '401':
-    $ref: '../components/responses/401.yaml'
+    $ref: ..\components\responses\401.yaml
