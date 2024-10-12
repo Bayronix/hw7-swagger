@@ -14,7 +14,7 @@
       "url": "http://localhost:3000"
     },
     {
-      "url": "https://node-js-hw-2-mongodb.onrender.com"
+      "url": "hw7-swagger-9zgd.onrender.com"
     }
   ],
   "tags": [
@@ -188,8 +188,6 @@
                 "required": [
                   "name",
                   "phoneNumber",
-                  "email",
-                  "isFavourite",
                   "contactType"
                 ],
                 "properties": {
