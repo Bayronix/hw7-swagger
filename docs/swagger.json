@@ -14,7 +14,7 @@
       "url": "http://localhost:3000"
     },
     {
-      "url": "hw7-swagger-9zgd.onrender.com"
+      "url": "https://hw7-swagger-9zgd.onrender.com"
     }
   ],
   "tags": [
@@ -387,13 +387,8 @@
                       "personal"
                     ],
                     "example": "home"
-                  },
-                  "photo": {
-                    "description": "Contact's photo",
-                    "type": "string",
-                    "format": "binary",
-                    "example": "https://res.cloudinary.com/uqwgdu/image/upload/newimage.png"
                   }
+                  
                 }
               }
             }

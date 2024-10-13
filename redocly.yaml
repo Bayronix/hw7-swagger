@@ -6,7 +6,7 @@ extends:
 rules:
   no-unused-components: error
 theme:
-  htmlTemplate: ./docs/index.html
+  htmlTemplate: "./docs/index.html"
   colors:
     primary:
       main: '#32329f'
