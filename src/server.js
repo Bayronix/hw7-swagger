@@ -17,7 +17,7 @@ export const startServer = () => {
   app.use(cookieParser());
 
 
-  app.use('/api-docs', swaggerDocs());
+  app.use('/api-docs', ...swaggerDocs());
 
   app.use(authRouter);
   app.use(routerContacts);
