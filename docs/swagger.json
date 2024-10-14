@@ -287,7 +287,7 @@
             "required": true,
             "schema": {
               "type": "string",
-              "example": "66e156c5bb5b90d367a19c92"
+              "example": "670cea5b375cff6ee2210ad3"
             },
             "description": "ID of the contact to retrieve"
           }
@@ -346,7 +346,7 @@
             "required": true,
             "schema": {
               "type": "string",
-              "example": "65ca67e7ae7f10c88b598384"
+              "example": "670cea5b375cff6ee2210ad3"
             },
             "description": "ID of the contact to update"
           }
@@ -413,7 +413,7 @@
                     },
                     "message": {
                       "type": "string",
-                      "example": "Successfully updated contact with id 65ca67e7ae7f10c88b598384!"
+                      "example": "Successfully updated contact with id 670cea5b375cff6ee2210ad3!"
                     },
                     "data": {
                       "type": "object",
@@ -440,7 +440,7 @@
                     },
                     "message": {
                       "type": "string",
-                      "example": "Contact with id 65ca67e7ae7f10c88b598384 not found."
+                      "example": "Contact with id 670cea5b375cff6ee2210ad3 not found."
                     }
                   }
                 }
@@ -468,7 +468,7 @@
             "required": true,
             "schema": {
               "type": "string",
-              "example": "65ca67e7ae7f10c88b598384"
+              "example": "670cea5b375cff6ee2210ad3"
             },
             "description": "ID of the contact to delete"
           }
@@ -491,7 +491,7 @@
                     },
                     "message": {
                       "type": "string",
-                      "example": "Successfully deleted contact with id 65ca67e7ae7f10c88b598384."
+                      "example": "Successfully deleted contact with id 670cea5b375cff6ee2210ad3."
                     }
                   }
                 }
@@ -514,7 +514,7 @@
                     },
                     "message": {
                       "type": "string",
-                      "example": "Contact with id 65ca67e7ae7f10c88b598384 not found."
+                      "example": "Contact with id 670cea5b375cff6ee2210ad3 not found."
                     }
                   }
                 }
@@ -548,7 +548,7 @@
           "_id": {
             "description": "Contact's id",
             "type": "string",
-            "example": "65e4decdd286b30065d54af9"
+            "example": "670cea5b375cff6ee2210ad3"
           },
           "name": {
             "description": "Contact's name",
@@ -583,7 +583,7 @@
           "userId": {
             "description": "User's ID associated with the contact",
             "type": "string",
-            "example": "65e4decdd286b30065d54af9"
+            "example": "670cea5b375cff6ee2210ad3"
           },
           "photo": {
             "description": "URL to the contact's photo",
